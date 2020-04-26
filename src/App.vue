@@ -1,28 +1,31 @@
+<!--
+ * @Descripttion: 
+ * @Author: Qingao Chai
+ * @Date: 2020-04-26 13:11:54
+ * @LastEditors: Qingao Chai
+ * @LastEditTime: 2020-04-26 15:35:04
+ -->
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+      <navigation/>
+      <search/>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import navigation from './components/navigation';
+import search from './components/search';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    navigation,
+    search
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
